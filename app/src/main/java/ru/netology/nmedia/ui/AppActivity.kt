@@ -1,6 +1,7 @@
 package ru.netology.nmedia.ui
 
 import android.os.Bundle
+import android.view.animation.LinearInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import ru.netology.nmedia.R
 
@@ -8,15 +9,17 @@ class AppActivity : AppCompatActivity(R.layout.activity_app) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        findViewById<StatsView>(R.id.stats).data = listOf(
-            100F,
-            200F,
-            300F,
+        val view = findViewById<StatsView>(R.id.stats)
+        view.data = listOf(
             400F,
-            500F,
-            600F,
-            700F,
-            800F,
+            400F,
+            400F,
+            400F,
+            400F
         )
+
     }
+
+
 }
+
